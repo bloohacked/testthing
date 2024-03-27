@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Input to Paragraph</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #textInput {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="textInput" placeholder="Enter your text here">
+        <button onclick="updateParagraph()">Submit</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function updateParagraph() {
+            var textInput = document.getElementById('textInput').value;
+            var outputParagraph = document.getElementById('output');
+            outputParagraph.textContent = textInput;
+        }
+    </script>
+</body>
+</html>
